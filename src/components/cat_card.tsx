@@ -111,21 +111,22 @@ const images = [
 	}
 ];
 
-const CatCard : React.FC<CatCardProps> = (props) => {    
+const CatCard : React.FC<CatCardProps> = ({name, species, favFoods, birthYear, catIndex}) => {       
+    
     return (
         <div className="card">
-            <h3 className="card__text card__header">{props.name}</h3>
-            {props.catIndex < images.length && (<CatImage 
-                image={images[props.catIndex].image}
-                altText={images[props.catIndex].altText}
-                licenceType={images[props.catIndex].licenceType}
-                licenceUrl={images[props.catIndex].licenceUrl}
-                attributionName={images[props.catIndex].attributionName}
-                attributionUrl={images[props.catIndex].attributionUrl} 
+            <h3 className="card__text card__header">{name}</h3>
+            {catIndex < images.length && (<CatImage 
+                image={images[catIndex].image}
+                altText={images[catIndex].altText}
+                licenceType={images[catIndex].licenceType}
+                licenceUrl={images[catIndex].licenceUrl}
+                attributionName={images[catIndex].attributionName}
+                attributionUrl={images[catIndex].attributionUrl} 
             />)}
-            <p className="card__text">Species: {props.species}</p>
-            <p className="card__text">Favourite Food(s): {props.favFoods.join(", ")}</p>
-            <p className="card__text">Birth Year: {props.birthYear}</p>
+            <p className="card__text">Species: {species}</p>
+            <p className="card__text">Favourite Food(s): {favFoods.join(", ")}</p>
+            <p className="card__text">Birth Year: {birthYear}</p>
             
         </div>
     );
