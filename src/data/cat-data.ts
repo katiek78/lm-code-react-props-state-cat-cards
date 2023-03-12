@@ -1,3 +1,5 @@
+import Cat from "./cat";
+
 import cat1 from "../assets/images/cat1.jpg";
 import cat2 from '../assets/images/cat2.jpg';
 import cat3 from '../assets/images/cat3.jpg';
@@ -10,9 +12,9 @@ import cat9 from '../assets/images/cat9.jpg';
 import cat10 from '../assets/images/cat10.jpg';
 import cat11 from '../assets/images/cat11.jpg';
 import cat12 from '../assets/images/cat12.jpg';
-import CatImage from "./cat_image";
+import CatImage from "../components/cat_image";
 
-const images = [
+export const images = [
 	{
 		image: cat1,
 		altText: 'Describe this cat!',
@@ -111,33 +113,83 @@ const images = [
 	}
 ];
 
-const CatCard : React.FC<CatCardProps> = ({name, species, favFoods, birthYear, catIndex}) => {       
-    
-    return (
-        <div className="card">
-            <h3 className="card__text card__header">{name}</h3>
-            {catIndex < images.length && (<CatImage 
-                image={images[catIndex].image}
-                altText={images[catIndex].altText}
-                licenceType={images[catIndex].licenceType}
-                licenceUrl={images[catIndex].licenceUrl}
-                attributionName={images[catIndex].attributionName}
-                attributionUrl={images[catIndex].attributionUrl} 
-            />)}
-            <p className="card__text">Species: {species}</p>
-            <p className="card__text">Favourite Food(s): {favFoods.join(", ")}</p>
-            <p className="card__text">Birth Year: {birthYear}</p>
-            
-        </div>
-    );
-};
-
-interface CatCardProps{
-    name: string;
-    species: string;
-    favFoods: Array<string>;
-    birthYear: number;
-    catIndex: number;
-}
-
-export default CatCard;
+export const catData:Array<Cat> = [
+    {
+             name: 'Little Miss Purrfect',
+             species: 'Cat',
+             favFoods: ['wet food', 'dry food'],
+             birthYear: 2016,
+         },
+         {
+             name: 'Mr Gwumpy',
+             species: 'Cat',
+             favFoods: ['caviar'],
+             birthYear: 2016,
+         },
+         {
+             name: 'Dopey',
+             species: 'Cat',
+             favFoods: ['bugs'],
+             birthYear: 2018,
+         },
+         {
+             name: 'Jumpy',
+             species: 'Scaredy Cat',
+             favFoods: ['not cucumbers!'],
+             birthYear: 2008,
+         },
+         {
+             name: 'Meowsalot',
+             species: 'Cat',
+             favFoods: ['tuna', 'catnip', 'celery'],
+             birthYear: 2012,
+         },
+         {
+             name: 'Cindy Clawford',
+             species: 'Cat',
+             favFoods: ['mice'],
+             birthYear: 2012,
+         },
+         {
+             name: 'Katy Purry',
+             species: 'Cat',
+             favFoods: ['cigarettes', 'coffee'],
+             birthYear: 2015,
+         },
+         {
+             name: 'Dr. Von Belly-Rub',
+             species: 'Cat',
+             favFoods: ['salt'],
+             birthYear: 2020,
+         },
+         {
+             name: 'Blobby',
+             species: 'Bird?',
+             favFoods: ['your soul'],
+             birthYear: 2020,
+         },
+         {
+             name: 'El Taco',
+             species: 'Cat',
+             favFoods: ['tequila', 'bar snax'],
+             birthYear: 1995,
+         },
+         {
+             name: 'Nibbles',
+             species: 'Hungry Cat',
+             favFoods: ['blankets', 'feet', 'tinsel'],
+             birthYear: 2003,
+         },
+         {
+             name: 'BoopySnoot',
+             species: 'Tiny Cat',
+             favFoods: ['milk'],
+             birthYear: 2021,
+         },
+         {
+            name: "Captain Catface",
+            species: "Sea Cattain",
+            favFoods: ["fish, rum"],
+            birthYear: 2016,
+          }
+ ];
