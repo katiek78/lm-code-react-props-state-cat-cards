@@ -27,8 +27,8 @@ function App(): JSX.Element {
   const [species, setSpecies] = useState<string>("");
   const [favFoods, setFavFoods] = useState<Array<string>>([]);
   const [birthYear, setBirthYear] = useState<number>(0);
-  const [animalType, setAnimalType] = useState<string>("");
-
+  const [animalType, setAnimalType] = useState<string>("Cat");
+  
   const addAnimal = () => {
     console.log(name, species);
     if (animalType === "Cat") {
