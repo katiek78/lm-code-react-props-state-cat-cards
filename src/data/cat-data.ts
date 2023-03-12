@@ -12,7 +12,6 @@ import cat9 from '../assets/images/cat9.jpg';
 import cat10 from '../assets/images/cat10.jpg';
 import cat11 from '../assets/images/cat11.jpg';
 import cat12 from '../assets/images/cat12.jpg';
-import CatImage from "../components/cat_image";
 
 export const images = [
 	{

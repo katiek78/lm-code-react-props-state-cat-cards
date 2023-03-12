@@ -1,10 +1,10 @@
 import { images } from '../data/cat-data';
 import CatImage from './cat_image';
 
-const Card : React.FC<CardProps> = ({name, species, favFoods, birthYear, cardIndex}) => {       
-    
+const Card : React.FC<CardProps> = ({name, species, favFoods, birthYear, cardIndex, animalType}) => {       
+    const cardStyle = animalType === 'Cat' ? 'card--cat' : 'card--dog';
     return (
-        <div className="card">
+        <div className={"card " + cardStyle}>
             <h3 className="card__text card__header">{name}</h3>
             {cardIndex < images.length && (<CatImage 
                 image={images[cardIndex].image}
@@ -28,6 +28,7 @@ interface CardProps{
     favFoods: Array<string>;
     birthYear: number;
     cardIndex: number;
+    animalType: string;
 }
 
 export default Card;
