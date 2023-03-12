@@ -1,6 +1,6 @@
 import Dog from './dog';
 
-const dogs: Array<Dog> = [
+export const dogData: Array<Dog> = [
 	{
 		name: 'Floofus',
 		species: 'Puppy',
