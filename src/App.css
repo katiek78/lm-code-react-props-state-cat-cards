@@ -2,6 +2,7 @@
 	--navy: #0d3b66;
 	--light: #faf0ca;
 	--yellow: #f4d35e;
+	--green: #d7edb5;
 	--orange: #ee964b;
 	--red: #f95738;
 }
@@ -63,7 +64,7 @@ body {
 }
 
 .card--dog {
-	background: var(--light);
+	background: var(--green);
 }
 
 .card--cat {
@@ -127,6 +128,24 @@ body {
 
 .ul__navbar {
 	width: 100%;
+}
+
+form {
+	font-family: 'SleepyCat';
+	font-size: 1.5em;
+	text-align: center;
+	padding: 3px;	
+}
+
+input {
+	margin: 10px;
+}
+
+button {
+	font-family: 'SleepyCat';
+	background-color: var(--navy);
+	color: var(--light);
+	font-size:1.5em;
 }
 
 .footer {
